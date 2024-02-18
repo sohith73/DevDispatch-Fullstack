@@ -13,7 +13,7 @@ import SignUp  from "./pages/SIgnUp"
 
 function App() {
      return (
-          <div className='bg-[#fff3e3] w-full h-screen'>
+          <div className='bg-[#fff3e3] w-full h-screen font-mono'>
           <BrowserRouter>
           <Routes>
                <Route path='/' element={<Home />} />
