@@ -13,9 +13,7 @@ import SignUp  from "./pages/SIgnUp"
 
 function App() {
      return (
-          // <div className='w-screen min-h-screen bg-black- flex flex-col'>
-               
-          // </div>
+          <div className='bg-[#fff3e3] w-full h-screen'>
           <BrowserRouter>
           <Routes>
                <Route path='/' element={<Home />} />
@@ -26,6 +24,7 @@ function App() {
                <Route path='/signup' element={<SignUp />} />
           </Routes>
           </BrowserRouter>
+          </div>
      )
 }
 

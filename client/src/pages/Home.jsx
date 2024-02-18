@@ -5,7 +5,7 @@ const Home = () => {
      return (
           <>
           <NavBar />
-          <div>Home</div>
+          <div className='bg-[#fff3e3] w-full h-screen px-[40px]'>Home</div>
           </>
      )
 }
