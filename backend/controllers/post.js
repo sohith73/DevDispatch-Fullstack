@@ -49,7 +49,7 @@ exports.deletePost = async (req, res) => {
 
 exports.getPosts = async (req, res) => {
      try {
-          const data = await Post({})
+          const data = await Post.find({})
           if (!data) {
                return res.status(404).json({
                     success: false,
