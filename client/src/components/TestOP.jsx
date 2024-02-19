@@ -1,16 +1,19 @@
 "use client";
 import React from "react";
 import { ContainerScroll } from "../components/ui/container-scroll-animation";
+import { useSelector } from "react-redux";
 
 export function TestOP() {
+     const { name } = useSelector((store) => store.auth)
      return (
           <div className="flex flex-col overflow-hidden bg-[#fff3e3] w-full px-[40px]">
                <ContainerScroll
+               
                     users={users}
                     titleComponent={
                          <>
                               <h1 className="text-4xl font-semibold text-[#5d5e59] ">
-                                   Lets Go<br />
+                                   Let's Go {name}<br />
                                    <span className="text-4xl text-[#5d5e59] font-mono  md:text-[6rem] font-bold mt-1 leading-none">
                                         Top Blogs
                                    </span>

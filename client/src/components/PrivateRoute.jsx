@@ -6,7 +6,8 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 const PrivateRoute = () => {
      const {signup} = useSelector((store) => store.auth)
-     return signup ? <Outlet /> : <Navigate to='/signup' />
+     const { name } = useSelector((store) => store.auth)
+     return signup&&name ? <Outlet /> : <Navigate to='/signup' />
 }
 
 export default PrivateRoute

@@ -1,6 +1,13 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom' 
+import store from '../../redux/store'
 const LoginNav = () => {
+     const { name } = useSelector((store) => store.auth)
+     let op = false
+     if (name==="sohith"){
+          op = true
+     }
      return (
           <>
                <nav className="bg-[#f7dfc0] p-4 border  border-y-[#e07f00] px-[40px]">
@@ -25,7 +32,8 @@ const LoginNav = () => {
                               </div>
                          </div>
                          <div className="hidden lg:flex lg:items-center lg:space-x-4 ">
-                              {/* <Link to='/signin'><button className="bg-[#ffa45d] text-[#5d5e59] font-mono font-semibold rounded-full px-4 py-2 hover:bg-[#fd9c52]">Sign In</button></Link>*/}
+                              {op ? (<Link to='/dashboard'><button className="bg-[#ffa45d] text-[#5d5e59] font-mono font-semibold rounded-full px-4 py-2 hover:bg-[#fd9c52]">Dashboard</button></Link>):null}
+                              
                               <Link to='/signup'><button className="bg-[#ffa45d] text-[#5d5e59] font-mono font-semibold rounded-full px-4 py-2 border border-black hover:bg-[#fd9c52]">Log Out</button></Link> 
                          </div>
                     </div>

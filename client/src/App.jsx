@@ -8,6 +8,7 @@ import Projects from "./pages/Projects"
 import Signin from "./pages/Signin"
 import SignUp from "./pages/SIgnUp"
 import PrivateRoute from './components/PrivateRoute';
+import Create from './components/Create';
 
 
 
@@ -21,6 +22,7 @@ function App() {
                          <Route path='/about' element={<About />} />
                          <Route element={<PrivateRoute />} >
                               <Route path='/dashboard' element={<Dashboard />} />
+                              <Route path='/dashboard/create' element={<Create />} />
                          </Route>
                          <Route path='/projects' element={<Projects />} />
                          <Route path='/signin' element={<Signin />} />
