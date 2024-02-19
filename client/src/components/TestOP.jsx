@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 export function TestOP() {
      const { name } = useSelector((store) => store.auth)
      return (
-          <div className="flex flex-col overflow-hidden bg-[#fff3e3] w-full px-[40px]">
+          <div className="flex flex-col overflow-hidden bg-[#fff3e3] w-full     px-[40px]">
                <ContainerScroll
                
                     users={users}
@@ -32,47 +32,7 @@ export const users = [
           image: "https://picsum.photos/id/10/300/300",
           badge: "Mentor",
      },
-     {
-          name: "Sarah Singh",
-          designation: "Founder, Sarah's Kitchen",
-          image: "https://picsum.photos/id/11/300/300",
-          badge: "Mentor",
-     },
-     {
-          name: "John Doe",
-          designation: "Software Engineer, Tech Corp",
-          image: "https://picsum.photos/id/12/300/300",
-          badge: "Mentor",
-     },
-     {
-          name: "Jane Smith",
-          designation: "Product Manager, Innovate Inc",
-          image: "https://picsum.photos/id/13/300/300",
-          badge: "Mentor",
-     },
-     {
-          name: "Robert Johnson",
-          designation: "Data Scientist, DataWorks",
-          image: "https://picsum.photos/id/14/300/300",
-          badge: "Mentor",
-     },
-     {
-          name: "Emily Davis",
-          designation: "UX Designer, DesignHub",
-          image: "https://picsum.photos/id/15/300/300",
-          badge: "Mentor",
-     },
-     {
-          name: "Michael Miller",
-          designation: "CTO, FutureTech",
-          image: "https://picsum.photos/id/16/300/300",
-          badge: "Mentor",
-     },
-     {
-          name: "Sarah Brown",
-          designation: "CEO, StartUp",
-          image: "https://picsum.photos/id/17/300/300",
-     },
+     
      {
           name: "James Wilson",
           designation: "DevOps Engineer, CloudNet",

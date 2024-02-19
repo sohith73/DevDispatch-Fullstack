@@ -6,7 +6,7 @@ const cors = require("cors")
 require('dotenv').config();
 
 const userRoutes = require("./routes/user");
-
+const postRoutes = require("./routes/post.route");
 const PORT = process.env.PORT || 4001
 const app = express()
 
@@ -21,6 +21,7 @@ app.use(
      })
 )
 app.use("/api/v1/auth", userRoutes);
+app.use("/api/v1/post", postRoutes);
 
 app.get("/", (req, res) => {
      res.status(200).json({
